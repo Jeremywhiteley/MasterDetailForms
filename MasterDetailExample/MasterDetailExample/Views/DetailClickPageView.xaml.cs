@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using Prism.Navigation;
 
 namespace MasterDetailExample.Views
 {

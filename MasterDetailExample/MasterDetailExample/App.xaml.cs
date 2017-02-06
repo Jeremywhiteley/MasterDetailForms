@@ -9,7 +9,7 @@ namespace MasterDetailExample
 	{
 		public App(IPlatformInitializer initializer = null) : base(initializer) { }
 
-		async protected override void OnInitialized()
+		protected async override void OnInitialized()
 		{
 			InitializeComponent();
 
@@ -25,6 +25,7 @@ namespace MasterDetailExample
 
 		protected override void RegisterTypes()
 		{
+			Container.RegisterTypeForNavigation<MenuPageView, MenuPageViewModel>();
 			Container.RegisterTypeForNavigation<MasterPageView, MasterPageViewModel>();
 			Container.RegisterTypeForNavigation<MasterDetailPageView, MasterDetailPageViewModel>();
 			Container.RegisterTypeForNavigation<DetailPageNoContentView, DetailPageNoContentViewModel>(); 
