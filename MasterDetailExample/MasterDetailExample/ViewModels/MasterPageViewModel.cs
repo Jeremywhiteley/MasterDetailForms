@@ -13,12 +13,16 @@ namespace MasterDetailExample.ViewModels
 	{
 		private IEventAggregator _eventAggregator;
 
+		public DelegateCommand NavigateMenuPageView { get; set; }
+
 		public DelegateCommand<string> ItemClicked { get; set; }
+
 		public MasterPageViewModel(INavigationService navigationService, IEventAggregator eventAggregator):base(navigationService) 
 		{
 			_eventAggregator = eventAggregator;
 			Title = "MasterPageView";
 			ItemClicked = new DelegateCommand<string>(DoItemClicked);
+			NavigateMenuPageView = new DelegateCommand(NavigateToMenuPageView);
 		}
 
 		private async void DoItemClicked(string itemValue)
@@ -34,6 +38,11 @@ namespace MasterDetailExample.ViewModels
 			{
 				await _navigationService.NavigateAsync("DetailPageView", navParameters);
 			}
+		}
+
+		private async void NavigateToMenuPageView()
+		{
+			await _navigationService.NavigateAsync("MenuPageView");
 		}
 	}
 }

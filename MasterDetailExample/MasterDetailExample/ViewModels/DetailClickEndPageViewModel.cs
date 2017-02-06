@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Prism.Navigation;
+using Prism.Events;
 
 namespace MasterDetailExample.ViewModels
 {
-	public class DetailClickEndPageViewModel : BaseViewModel
+	public class DetailClickEndPageViewModel : BaseDetailPageViewModel
 	{
 		private string _itemName;
 		public string ItemName
@@ -16,7 +17,8 @@ namespace MasterDetailExample.ViewModels
 			set { SetProperty(ref _itemName, value); }
 		}
 
-		public DetailClickEndPageViewModel(INavigationService navigationService) : base(navigationService)
+		public DetailClickEndPageViewModel(INavigationService navigationService,
+		                                 	IEventAggregator eventAggregator) : base(navigationService, eventAggregator)
 		{
 			Title = "DetailClickEndPageView";
 		}

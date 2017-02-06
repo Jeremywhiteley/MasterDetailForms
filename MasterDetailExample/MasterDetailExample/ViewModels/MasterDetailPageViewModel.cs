@@ -6,6 +6,8 @@ using System.Linq;
 using Prism.Navigation;
 using Prism.Events;
 
+using MasterDetailExample.Events;
+
 namespace MasterDetailExample.ViewModels
 {
 	public class MasterDetailPageViewModel : BaseViewModel
@@ -18,6 +20,7 @@ namespace MasterDetailExample.ViewModels
 			Title = "MasterDetailPageView";
 
 			_eventAggregator.GetEvent<DetailPageViewNavigationEvent>().Subscribe(NavigateToDetailPageView);
+			_eventAggregator.GetEvent<MenuPageViewNavigationEvent>().Subscribe(NavigateToMenuPageView);
 		}
 
 		public override void OnNavigatedFrom(NavigationParameters parameters)
@@ -28,6 +31,11 @@ namespace MasterDetailExample.ViewModels
 		public override void OnNavigatedTo(NavigationParameters parameters)
 		{
 			base.OnNavigatedTo(parameters);
+		}
+
+		private async void NavigateToMenuPageView()
+		{
+			await _navigationService.NavigateAsync("BaseNavigationPageView/MenuPageView");
 		}
 
 		private async void NavigateToDetailPageView(DetailPageViewNavigationMessage message)

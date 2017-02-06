@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Input;
 
 using Prism.Commands;
+using Prism.Events;
 using Prism.Mvvm;
 using Prism.Navigation;
 
@@ -11,7 +12,7 @@ using Xamarin.Forms;
 
 namespace MasterDetailExample.ViewModels
 {
-	public class DetailPageViewModel : BaseViewModel
+	public class DetailPageViewModel : BaseDetailPageViewModel
 	{
 		private string _itemName;
 		public string ItemName
@@ -22,7 +23,8 @@ namespace MasterDetailExample.ViewModels
 
 		public new DelegateCommand NavigateCommand { get; set; }
 
-		public DetailPageViewModel(INavigationService navigationService):base(navigationService)
+		public DetailPageViewModel(INavigationService navigationService, 
+		                           IEventAggregator eventAggregator):base(navigationService, eventAggregator)
 		{ 
 			Title = "DetailPageView";
 			NavigateCommand = new DelegateCommand(NavigateToClickPageView);

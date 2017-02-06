@@ -64,6 +64,12 @@
     </Compile>
     <Compile Include="ViewModels\DetailClickEndPageViewModel.cs" />
     <Compile Include="Views\BaseDetailPageView.cs" />
+    <Compile Include="Views\MenuPageView.xaml.cs">
+      <DependentUpon>MenuPageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MenuPageViewModel.cs" />
+    <Compile Include="ViewModels\BaseDetailPageViewModel.cs" />
+    <Compile Include="Events\MenuPageNavigationEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -88,6 +94,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DetailClickEndPageView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MenuPageView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
