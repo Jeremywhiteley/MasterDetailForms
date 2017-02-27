@@ -10,5 +10,4 @@
     	<Label Text="{Binding Title}" VerticalOptions="Center" HorizontalOptions="Center" />
     	<Button Command="{Binding NavigateCommand}" Text="Navigate" />
 	</StackLayout>-->
-
 </NavigationPage>

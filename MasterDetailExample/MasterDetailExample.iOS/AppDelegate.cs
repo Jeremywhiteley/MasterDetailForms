@@ -7,6 +7,8 @@ using Microsoft.Practices.Unity;
 using Prism.Unity;
 using UIKit;
 
+using MasterDetailExample.Repository;
+
 namespace MasterDetailExample.iOS
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the 
@@ -36,7 +38,7 @@ namespace MasterDetailExample.iOS
 	{
 		public void RegisterTypes(IUnityContainer container)
 		{
-
+			container.RegisterInstance<QuotesRepository>(new QuotesRepository());
 		}
 	}
 }

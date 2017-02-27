@@ -5,6 +5,6 @@ namespace MasterDetailExample
 {
 	public class DetailPageViewNavigationEvent : PubSubEvent<DetailPageViewNavigationMessage>
 	{
-
+	
 	}
 }

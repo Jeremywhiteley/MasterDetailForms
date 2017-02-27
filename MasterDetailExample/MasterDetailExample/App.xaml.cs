@@ -15,23 +15,21 @@ namespace MasterDetailExample
 
 			if (Device.Idiom == TargetIdiom.Desktop || Device.Idiom == TargetIdiom.Tablet)
 			{
-				await NavigationService.NavigateAsync("MasterDetailPageView/BaseNavigationPageView/DetailPageNoContentView");
+				await NavigationService.NavigateAsync("QuoteMasterDetailPageView/BaseNavigationPageView/QuoteDetailPageNoContentView");
 			}
 			else
 			{
-				await NavigationService.NavigateAsync("BaseNavigationPageView/MasterPageView");
+				await NavigationService.NavigateAsync("BaseNavigationPageView/QuoteMasterPageView");
 			}
 		}
 
 		protected override void RegisterTypes()
 		{
 			Container.RegisterTypeForNavigation<MenuPageView, MenuPageViewModel>();
-			Container.RegisterTypeForNavigation<MasterPageView, MasterPageViewModel>();
-			Container.RegisterTypeForNavigation<MasterDetailPageView, MasterDetailPageViewModel>();
-			Container.RegisterTypeForNavigation<DetailPageNoContentView, DetailPageNoContentViewModel>(); 
-			Container.RegisterTypeForNavigation<DetailPageView, DetailPageViewModel>();
-			Container.RegisterTypeForNavigation<DetailClickPageView, DetailClickPageViewModel>();
-			Container.RegisterTypeForNavigation<DetailClickEndPageView, DetailClickEndPageViewModel>();
+			Container.RegisterTypeForNavigation<QuoteMasterPageView, QuoteMasterPageViewModel>();
+			Container.RegisterTypeForNavigation<QuoteMasterDetailPageView, QuoteMasterDetailPageViewModel>();
+			Container.RegisterTypeForNavigation<QuoteDetailPageNoContentView, QuoteDetailPageNoContentViewModel>(); 
+			Container.RegisterTypeForNavigation<QuoteDetailPageView, QuoteDetailPageViewModel>();
 			Container.RegisterTypeForNavigation<BaseNavigationPageView, BaseNavigationPageViewModel>();
 
 		}
