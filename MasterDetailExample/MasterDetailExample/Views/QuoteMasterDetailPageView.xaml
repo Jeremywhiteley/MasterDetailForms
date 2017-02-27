@@ -7,10 +7,10 @@
 
 	xmlns:local="clr-namespace:MasterDetailExample.Views;assembly=MasterDetailExample"
 
-	x:Class="MasterDetailExample.Views.MasterDetailPageView">
+	x:Class="MasterDetailExample.Views.QuoteMasterDetailPageView">
 
 	<MasterDetailPage.Master>
-		<local:MasterPageView  /> 
+		<local:QuoteMasterPageView  /> 
 	</MasterDetailPage.Master>
 
 </MasterDetailPage>

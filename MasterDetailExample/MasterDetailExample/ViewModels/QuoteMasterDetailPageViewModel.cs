@@ -10,11 +10,14 @@ using MasterDetailExample.Events;
 
 namespace MasterDetailExample.ViewModels
 {
-	public class MasterDetailPageViewModel : BaseViewModel
+	public class QuoteMasterDetailPageViewModel : BaseViewModel
 	{
 		private IEventAggregator _eventAggregator;
 
-		public MasterDetailPageViewModel(INavigationService navigationService, IEventAggregator eventAggregator):base(navigationService)
+		public QuoteMasterDetailPageViewModel(
+			INavigationService navigationService, 
+		    IEventAggregator eventAggregator)
+			:base(navigationService)
 		{
 			_eventAggregator = eventAggregator;
 			Title = "MasterDetailPageView";
@@ -41,7 +44,7 @@ namespace MasterDetailExample.ViewModels
 		private async void NavigateToDetailPageView(DetailPageViewNavigationMessage message)
 		{
 			var parameter = new NavigationParameters($"id={message.Id}");
-			await _navigationService.NavigateAsync("BaseNavigationPageView/DetailPageView", parameter);
+			await _navigationService.NavigateAsync("BaseNavigationPageView/QuoteDetailPageView", parameter);
 		}
 	}
 }

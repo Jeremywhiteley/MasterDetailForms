@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
+	prism:ViewModelLocator.AutowireViewModel="True" 
+	x:Class="MasterDetailExample.Views.QuoteMasterPageView"
+	Title="{Binding Title}"
+	>
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+	</ContentPage.Padding>	
+	<ContentPage.Content>
+		<ListView 
+			x:Name="lvQuotes"
+			ItemsSource="{Binding RandomQuotes}"
+			HasUnevenRows="true"
+			>
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.View>
+							<StackLayout 
+								Padding="20, 10"
+								Orientation="Vertical" 
+								HorizontalOptions="FillAndExpand"
+								VerticalOptions="StartAndExpand"
+								>
+								<Label 
+									Text="{Binding Text}" 
+									Style="{DynamicResource TitleStyle}" 
+									HorizontalOptions="StartAndExpand"
+									VerticalOptions="StartAndExpand"
+									LineBreakMode="WordWrap" />
+								<Label 
+									Text="{Binding AuthorValue.FullName}"
+									Style="{DynamicResource SubtitleTextStyle}" />
+							</StackLayout>	
+						</ViewCell.View>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+
+			
+	</ContentPage.Content>
+</ContentPage>

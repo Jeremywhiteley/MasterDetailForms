@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace MasterDetailExample.Views
 {
-	public partial class DetailPageView : BaseDetailPageView
+	public partial class QuoteDetailPageView : BaseDetailPageView
 	{
-		public DetailPageView() 
+		public QuoteDetailPageView() 
 		{
 			InitializeComponent();
 		}

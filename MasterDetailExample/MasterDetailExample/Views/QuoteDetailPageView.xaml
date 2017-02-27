@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d:BaseDetailPageView
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:d="clr-namespace:MasterDetailExample.Views;assembly=MasterDetailExample"
+	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
+	prism:ViewModelLocator.AutowireViewModel="True" 
+	Title="{Binding Title}"
+	x:Class="MasterDetailExample.Views.QuoteDetailPageView"
+	>
+	<StackLayout Padding="0, 20, 0, 0">
+		<ListView
+			x:Name="lvAuthorQuotes"
+			ItemsSource="{Binding AuthorQuotes}"
+			HasUnevenRows="true">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.View>
+						<StackLayout 
+									Padding="20, 10"
+									Orientation="Vertical" 
+									HorizontalOptions="FillAndExpand"
+									VerticalOptions="StartAndExpand"
+									>
+									<Label 
+										Text="{Binding Text}" 
+										HorizontalOptions="StartAndExpand"
+										VerticalOptions="StartAndExpand"
+										LineBreakMode="WordWrap" />
+								</StackLayout>	
+						</ViewCell.View>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>	
+  	</StackLayout>
+
+</d:BaseDetailPageView>

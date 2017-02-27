@@ -5,21 +5,18 @@
 	xmlns:d="clr-namespace:MasterDetailExample.Views;assembly=MasterDetailExample"
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
 	prism:ViewModelLocator.AutowireViewModel="True" 
-	Title="DetailPageNoContentView"
-	x:Class="MasterDetailExample.Views.DetailPageNoContentView"
-	BackgroundColor="Blue"
+	Title="{Binding Title}"
+	x:Class="MasterDetailExample.Views.QuoteDetailPageNoContentView"
 	>
-	<StackLayout Padding="0, 20, 0, 0">
+	<StackLayout 
+		Padding="0, 20, 0, 0" 
+		HorizontalOptions="CenterAndExpand"
+		VerticalOptions="CenterAndExpand"
+		>
 		<Label 
-			Text="{Binding Title}"
+			Text="{Binding Message}"
 			VerticalOptions="Center" 
 			HorizontalOptions="Center" 
-			TextColor="White" />
-
-		<Label 
-			Text="Nothing Selected - tap Navigate button in MasterViewPage" 
-			VerticalOptions="Center" 
-			HorizontalOptions="Center" 
-			TextColor="White" />
+			/>
 	</StackLayout>
 </d:BaseDetailPageView>
