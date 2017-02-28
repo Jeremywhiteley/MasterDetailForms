@@ -110,13 +110,13 @@
       <HintPath>..\packages\Xamarin.Forms.2.3.4.192-pre2\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Prism">
-      <HintPath>..\packages\Prism.Core.6.3.0-pre1\lib\Xamarin.iOS10\Prism.dll</HintPath>
+      <HintPath>..\packages\Prism.Core.6.3.0-pre2\lib\Xamarin.iOS10\Prism.dll</HintPath>
     </Reference>
     <Reference Include="Prism.Forms">
-      <HintPath>..\packages\Prism.Forms.6.3.0-pre1\lib\Xamarin.iOS1.0\Prism.Forms.dll</HintPath>
+      <HintPath>..\packages\Prism.Forms.6.3.0-pre2\lib\Xamarin.iOS1.0\Prism.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Prism.Unity.Forms">
-      <HintPath>..\packages\Prism.Unity.Forms.6.3.0-pre1\lib\Xamarin.iOS1.0\Prism.Unity.Forms.dll</HintPath>
+      <HintPath>..\packages\Prism.Unity.Forms.6.3.0-pre2\lib\Xamarin.iOS1.0\Prism.Unity.Forms.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
